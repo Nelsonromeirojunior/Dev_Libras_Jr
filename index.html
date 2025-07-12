@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV Libras Júnior</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" href="./Imagem/icons8-dev-50.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="./Imagem/icons8-dev-50.png" alt="DEV Libras Júnior Logo" class="logo">
+            <h1>DEV Libras Júnior</h1>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a class="navlink" href="./index.html">Início</a></li>
+                <li><a class="navlink" href="./sobremim.html">Sobre Mim</a></li>
+                <li><a class="navlink" href="./contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-image">
+        <section id="inicio">
+            <h2>Bem-vindo ao DEV Libras Júnior</h2>
+            <p>Desenvolvendo e Porgramdor e Acessibilidade 🤟🏻</p>
+            <img src="./Imagem/ChatGPT Image 29 de jun. de 2025, 19_19_15.png" alt="DEV Libras Júnior"
+                class="main-image">
+            <div class="secao">
+                <div class="conteudo">
+                    <div class="texto">
+                        <p>Este projeto se propõe a incentivar a acessibilidade e inclusão digital a pessoas surdas e
+                            com deficiência auditiva. A tecnologia e o design são utilizados para gerar soluções que
+                            melhorem o acesso à informação e comunicação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+    </main>
+    <footer class="container-footer">
+        <p>&copy; <span id="ano-atual"></span> DEV Libras Júnior. Todos os direitos reservados.</p>
+        <p>Desenvolvedor Front-End por Nelson Junior</p>
+    </footer>
+    <script>
+        const anoAtual = new Date().getFullYear();
+        document.getElementById("ano-atual").textContent = anoAtual;
+    </script>
+</body>
+
+</html>
