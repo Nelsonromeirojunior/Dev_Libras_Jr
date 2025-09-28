@@ -200,8 +200,8 @@
             <h3 class="timeline-title">Experiência Profissional</h3>
             <ul class="list-unstyled text-secondary lh-lg">
               <li class="mb-2">
-                🏭 <strong>VIP Papelão Ondulado</strong> (2011-2014) - Auxiliar de
-                Produção
+                🏭 <strong>VIP Papelão Ondulado</strong> (2011-2014) - Auxiliar
+                de Produção
               </li>
               <li class="mb-2">
                 ⚙️ <strong>Eaton Ltda</strong> (2014-2016) - Operador de Máquina
@@ -491,7 +491,10 @@
               </div>
               <h3 class="fs-4 fw-bold mb-0">DEV Libras Júnior</h3>
             </div>
-            <p class="mb-2">&copy; 2024 Todos os direitos reservados.</p>
+            <p class="mb-2">
+              &copy; <span id="current-year"></span> Todos os direitos
+              reservados.
+            </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <p class="mb-2">
@@ -507,6 +510,12 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Obtém o ano atual e insere no elemento com id="current-year"
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
 
     <!-- Bootstrap JS -->
     <script
