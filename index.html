@@ -1,65 +1,519 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Nelson Romeiro, desenvolvedor Front-End focado em acessibilidade digital e inclusão para a comunidade surda."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvedor front-end, acessibilidade digital, libras, nelson romeiro, portfólio"
+    />
+    <meta name="author" content="Nelson Romeiro Junior" />
+    <title>DEV Libras Júnior - Nelson Romeiro</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEV Libras Júnior</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="icon" href="./Imagem/icons8-dev-50.png" type="image/png">
-</head>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="logo-circle me-3">🤟🏻</div>
+          <span class="navbar-brand text-white fs-4 fw-bold mb-0"
+            >DEV Libras Júnior</span
+          >
+        </div>
 
-<body>
-    <header>
-        <div class="container">
-            <img src="./Imagem/icons8-dev-50.png" alt="DEV Libras Júnior Logo" class="logo">
-            <h1>DEV Libras Júnior</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom active"
+                href="#home"
+                onclick="scrollToSection('home')"
+                >🏠 Início</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="#about"
+                onclick="scrollToSection('about')"
+                >👨‍💻 Sobre</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="#skills"
+                onclick="scrollToSection('skills')"
+                >⚙️ Habilidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="#contact"
+                onclick="scrollToSection('contact')"
+                >📧 Contato</a
+              >
+            </li>
+          </ul>
         </div>
-    </header>
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a class="navlink" href="./index.html">Início</a></li>
-                <li><a class="navlink" href="./sobremim.html">Sobre Mim</a></li>
-                <li><a class="navlink" href="./contato.html">Contato</a></li>
-            </ul>
-        </div>
+      </div>
     </nav>
-    <main class="container-image">
-        <section id="inicio">
-            <h2>Bem-vindo ao DEV Libras Júnior</h2>
-            <p>Desenvolvendo e Porgramdor e Acessibilidade 🤟🏻</p>
-            <img src="./Imagem/ChatGPT Image 29 de jun. de 2025, 19_19_15.png" alt="DEV Libras Júnior"
-                class="main-image">
-            <div class="secao">
-                <div class="conteudo">
-                    <div class="texto">
-                        <p>Este projeto se propõe a incentivar a acessibilidade e inclusão digital a pessoas surdas e
-                            com deficiência auditiva. A tecnologia e o design são utilizados para gerar soluções que
-                            melhorem o acesso à informação e comunicação.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-    </main>
-    <footer class="container-footer">
-        <p>&copy; <span id="ano-atual"></span> DEV Libras Júnior. Todos os direitos reservados.</p>
-        <p>Desenvolvedor Front-End por Nelson Junior</p>
-    </footer>
-    <script>
-        const anoAtual = new Date().getFullYear();
-        document.getElementById("ano-atual").textContent = anoAtual;
-    </script>
-</body>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-content">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h1 class="hero-title">Bem-vindo ao<br />DEV Libras Júnior</h1>
+                <p class="hero-subtitle">
+                  Desenvolvendo Programação e Acessibilidade 🤟🏻
+                </p>
+                <p class="fs-5 text-secondary mb-4 lh-lg">
+                  Este projeto incentiva a acessibilidade e inclusão digital
+                  para pessoas surdas e com deficiência auditiva. Utilizamos
+                  tecnologia e design para criar soluções que melhorem o acesso
+                  à informação e comunicação.
+                </p>
+                <div
+                  class="d-flex flex-wrap justify-content-center justify-content-lg-start"
+                >
+                  <button
+                    class="btn btn-custom-primary"
+                    onclick="scrollToSection('about')"
+                  >
+                    👨‍💻 Conheça Minha História
+                  </button>
+                  <button
+                    class="btn btn-custom-secondary"
+                    onclick="scrollToSection('contact')"
+                  >
+                    📧 Entre em Contato
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                <div class="hero-icon-box">
+                  <div class="contact-icon">🤟🏻💻</div>
+                  <h3 class="fw-bold mb-2">DEV Libras Júnior</h3>
+                  <p class="mb-0">Acessibilidade Digital</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <div class="vlibras-notice">
+                <span class="me-2">🌐</span>
+                <strong
+                  >Este site possui integração com VLibras para tradução em
+                  Libras</strong
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Minha História</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">👤</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">Apresentação</h3>
+            <p class="text-secondary lh-lg">
+              Nelson Romeiro da Cunha Junior - Sou deficiente auditivo (surdo) e
+              nasci em Campinas, SP, no dia 16/02/1993. Quando tinha 2 anos,
+              perdi a audição devido a uma doença. Desde então, minha jornada
+              tem sido de superação e aprendizado constante.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🎓</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">Formação Acadêmica</h3>
+            <ul class="list-unstyled text-secondary lh-lg">
+              <li class="mb-2">
+                📚 <strong>MBA em Liderança Executiva de TI</strong> –
+                Anhanguera Educacional (08/2025 - 02/2026)
+              </li>
+              <li class="mb-2">
+                💻 <strong>Pós-Graduação em Engenharia de Software</strong> –
+                Anhanguera Educacional (01/2025 - 07/2025)
+              </li>
+              <li class="mb-2">
+                🎓
+                <strong
+                  >Graduação em Análise e Desenvolvimento de Sistemas</strong
+                >
+                – Anhanguera Educacional (09/2022 - 07/2024)
+              </li>
+              <li>
+                🖥️ <strong>Curso Técnico em Informática</strong> – Anhanguera
+                Educacional (04/2014 - 10/2015)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">💼</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">Experiência Profissional</h3>
+            <ul class="list-unstyled text-secondary lh-lg">
+              <li class="mb-2">
+                🏭 <strong>VIP Papelão Ondulado</strong> (2011) - Auxiliar de
+                Produção
+              </li>
+              <li class="mb-2">
+                ⚙️ <strong>Eaton Ltda</strong> (2015-2016) - Operador de Máquina
+              </li>
+              <li>
+                🏢 <strong>Unilever</strong> (2016-presente) - Inspetor de
+                Qualidade
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">💭</div>
+          <div class="timeline-card">
+            <h3 class="timeline-title">Meu Sonho</h3>
+            <div class="text-center">
+              <p class="fs-4 fst-italic fw-medium text-primary">
+                "Meu sonho é me tornar programador e contribuir para a inclusão
+                digital da comunidade surda!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Minhas Especialidades</h2>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">💻</div>
+              <h3 class="skill-title">Desenvolvimento Web</h3>
+              <p class="text-secondary mb-3">
+                HTML5, CSS3, JavaScript, React e outras tecnologias modernas
+                para criar experiências web acessíveis.
+              </p>
+              <div>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">🔧</div>
+              <h3 class="skill-title">Manutenção Hardware</h3>
+              <p class="text-secondary mb-3">
+                Experiência em manutenção de computadores, notebooks e redes,
+                com foco em soluções práticas.
+              </p>
+              <div>
+                <span class="skill-tag">Hardware</span>
+                <span class="skill-tag">Redes</span>
+                <span class="skill-tag">Manutenção</span>
+                <span class="skill-tag">Suporte</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">🌐</div>
+              <h3 class="skill-title">Acessibilidade Digital</h3>
+              <p class="text-secondary mb-3">
+                Desenvolvimento de soluções tecnológicas inclusivas para a
+                comunidade surda e deficientes auditivos.
+              </p>
+              <div>
+                <span class="skill-tag">Libras</span>
+                <span class="skill-tag">Inclusão</span>
+                <span class="skill-tag">UX/UI</span>
+                <span class="skill-tag">VLibras</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h3 class="skill-title">Linguagens de Programação</h3>
+              <p class="text-secondary mb-3">
+                Conhecimento em diversas linguagens e frameworks, sempre
+                buscando aprender novas tecnologias.
+              </p>
+              <div>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h3 class="skill-title">Engenharia de Software</h3>
+              <p class="text-secondary mb-3">
+                Metodologias ágeis, gestão de projetos e boas práticas de
+                desenvolvimento.
+              </p>
+              <div>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">UML</span>
+                <span class="skill-tag">Testes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="skill-card">
+              <div class="skill-icon">🏆</div>
+              <h3 class="skill-title">Qualidade & Processos</h3>
+              <p class="text-secondary mb-3">
+                Experiência em controle de qualidade, WCM e processos
+                industriais.
+              </p>
+              <div>
+                <span class="skill-tag">WCM</span>
+                <span class="skill-tag">ISO</span>
+                <span class="skill-tag">Qualidade</span>
+                <span class="skill-tag">Processos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+
+        <div class="contact-card">
+          <div class="text-center mb-5">
+            <div class="contact-icon">💌</div>
+            <h3 class="fs-2 fw-bold text-primary mb-3">Vamos conversar!</h3>
+            <p class="fs-5 text-secondary">
+              Estou sempre aberto para novas oportunidades e parcerias. Entre em
+              contato comigo!
+            </p>
+          </div>
+
+          <form id="contactForm" action="processar_contato.php" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label form-label-custom" for="name"
+                  >👤 Nome *</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-custom"
+                  id="name"
+                  name="name"
+                  placeholder="Seu nome completo"
+                  required
+                  aria-label="Nome completo"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label form-label-custom" for="email"
+                  >📧 E-mail *</label
+                >
+                <input
+                  type="email"
+                  class="form-control form-control-custom"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                  aria-label="Endereço de e-mail"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label form-label-custom" for="subject"
+                  >💬 Assunto</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-custom"
+                  id="subject"
+                  name="subject"
+                  placeholder="Assunto da mensagem"
+                  aria-label="Assunto da mensagem"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label form-label-custom" for="message"
+                  >📝 Mensagem *</label
+                >
+                <textarea
+                  class="form-control form-control-custom"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Escreva sua mensagem aqui..."
+                  required
+                  aria-label="Mensagem"
+                ></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button
+                  type="submit"
+                  class="btn btn-custom-primary btn-lg"
+                  id="submitBtn"
+                >
+                  📤 Enviar Mensagem
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div id="formMessage" class="mt-4" style="display: none"></div>
+
+          <hr class="my-5" />
+
+          <div class="row g-4 text-center">
+            <div class="col-md-4">
+              <div class="contact-info-card">
+                <div class="contact-info-icon">📧</div>
+                <h5 class="fw-bold text-primary mb-2">E-mail</h5>
+                <a
+                  href="mailto:devlibrasjunior@gmail.com"
+                  class="text-decoration-none fw-medium"
+                  style="color: var(--yellow-accent)"
+                >
+                  devlibrasjunior@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact-info-card">
+                <div class="contact-info-icon">💼</div>
+                <h5 class="fw-bold text-primary mb-2">GitHub</h5>
+                <a
+                  href="https://github.com/Nelsonromeirojunior"
+                  target="_blank"
+                  class="text-decoration-none fw-medium"
+                  style="color: var(--yellow-accent)"
+                >
+                  Nelsonromeirojunior
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact-info-card">
+                <div class="contact-info-icon">🔗</div>
+                <h5 class="fw-bold text-primary mb-2">LinkedIn</h5>
+                <a
+                  href="https://www.linkedin.com/in/nelson-romeiro-junior-5933263a/"
+                  target="_blank"
+                  class="text-decoration-none fw-medium"
+                  style="color: var(--yellow-accent)"
+                >
+                  Nelson Romeiro Junior
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-md-start mb-3"
+            >
+              <div
+                class="logo-circle me-3"
+                style="background-color: var(--yellow-accent)"
+              >
+                🤟🏻
+              </div>
+              <h3 class="fs-4 fw-bold mb-0">DEV Libras Júnior</h3>
+            </div>
+            <p class="mb-2">&copy; 2024 Todos os direitos reservados.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-2">
+              Desenvolvedor Front-End com 🧏🏻‍♂️ por
+              <span class="fw-bold" style="color: var(--yellow-accent)"
+                >Nelson Junior</span
+              >
+            </p>
+            <p class="text-light mb-0">
+              🌐 Comprometido com a acessibilidade digital
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+    ></script>
+    <!-- Custom JS -->
+    <script src="./JS/script.js"></script>
+  </body>
 </html>
