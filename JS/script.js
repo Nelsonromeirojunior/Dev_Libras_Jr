@@ -52,17 +52,6 @@
 
         handleScroll();
 
-        // VLibras fallback with better error handling
-        setTimeout(() => {
-            if (!window.VLibras) {
-                const vlibrasNotice = document.querySelector('.vlibras-notice');
-                if (vlibrasNotice) {
-                    vlibrasNotice.innerHTML = '⚠️ Plugin VLibras não carregado. Tente recarregar a página.';
-                    vlibrasNotice.style.background = '#ef4444';
-                }
-            }
-        }, 3000);
-
         // Handle navbar collapse on mobile
         document.querySelectorAll('.nav-link-custom').forEach(link => {
             link.addEventListener('click', () => {
@@ -152,14 +141,4 @@
 
         console.log('DEV Libras Júnior - Portfolio carregado com sucesso! 🤟🏻💻');
     });
-
-    // VLibras initialization with error handling
-    try {
-        if (window.VLibras) {
-            new window.VLibras.Widget("https://vlibras.gov.br/app");
-        }
-    } catch (error) {
-        console.warn('VLibras não pôde ser inicializado:', error);
-    }
-
 })()
